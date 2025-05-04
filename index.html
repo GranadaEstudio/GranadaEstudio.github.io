@@ -60,23 +60,43 @@
     <img src="dibujo3.PNG" alt="Proyecto 2" width="300">
   </section>
 
-  <section id="galeria">
-    <h2>Galería</h2>
-    <p>Un vistazo virtual a mi mundo, pásale con confianza!.</p>
-    <img src="dibujo3.png" alt="Imagen 1" width="300">
-    <img src="YSL FINAL.png" alt="Imagen 2" width="300">
-    <img src="bichito.PNG" alt="Imagen 2" width="300">
-    <img src="KOBAYASHI POST.png" alt="Imagen 2" width="300">
-    <div class="galeria">
-  <video width="300" height="534" controls>
-    <source src="video1.mp4" type="video/mp4">
-    <img src="fish.jpg" alt="Imagen 2" width="300">
-    <img src="santossca.jpg" alt="Imagen 2" width="300">
-    <img src="logos.jpg" alt="Imagen 2" width="300">
-    <img src="quotes.jpg" alt="Imagen 2" width="300">
-  </video>
-</div>
-  </section>
+  <style>
+  .galeria {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .galeria img,
+  .galeria video {
+    width: 300px;
+    height: auto;
+    border-radius: 8px;
+  }
+</style>
+
+<section id="galeria">
+  <h2>Galería</h2>
+  <p>Un vistazo virtual a mi mundo, pásale con confianza!.</p>
+
+  <div class="galeria">
+    <img src="dibujo3.png" alt="Imagen 1">
+    <img src="YSL FINAL.png" alt="Imagen 2">
+    <img src="bichito.PNG" alt="Imagen 3">
+    <img src="KOBAYASHI POST.png" alt="Imagen 4">
+
+    <video width="300" height="534" controls>
+      <source src="video1.mp4" type="video/mp4">
+    </video>
+
+    <img src="fish.jpg" alt="Imagen 5">
+    <img src="santossca.jpg" alt="Imagen 6">
+    <img src="logos.jpg" alt="Imagen 7">
+    <img src="quotes.jpg" alt="Imagen 8">
+  </div>
+</section>
+
 
   <section id="contacto">
     <h2>Contacto</h2>
