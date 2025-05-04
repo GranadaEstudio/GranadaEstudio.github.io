@@ -70,9 +70,17 @@
 
   .galeria img,
   .galeria video {
-    max-width: 300px;
+    max-width: 100%;
     height: auto;
     border-radius: 8px;
+  }
+
+  .galeria img {
+    max-height: 500px; /* o el alto máximo que quieras permitir */
+  }
+
+  .galeria video {
+    max-width: 300px;
   }
 </style>
 
@@ -88,7 +96,7 @@
 
     <video controls>
       <source src="video1.mp4" type="video/mp4">
-     
+      Tu navegador no soporta videos.
     </video>
 
     <img src="fish.jpg" alt="Imagen 5">
