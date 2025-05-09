@@ -1,123 +1,192 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <title>Granada Estudio</title>
-  <style>
-    body {
-      font-family: sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-    nav {
-      background-color: #333;
-      padding: 10px;
-      text-align: center;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 15px;
-    }
-    section {
-      padding: 40px;
-      text-align: center;
-    }
-    footer {
-      background-color: #333;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-  </style>
-</head>
-<body>
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-  <nav>
-    <a href="#inicio">Inicio</a>
-    <a href="#sobremi">Sobre mí</a>
-    <a href="#proyectos">Proyectos</a>
-    <a href="#galeria">Galería</a>
-    <a href="#contacto">Contacto</a>
-  </nav>
+<style>
+  body {
+    background-color: #000;
+    font-family: 'Poppins', sans-serif;
+    color: #eee;
+    margin: 0;
+  }
 
-  <section id="inicio">
-    <h1>¡Bienvenidx a Granada Estudio!</h1>
-    <p>Un estudio creativo que busca siempre darle paso a la creatividad, la imaginación, y la innovación.</p>
-  </section>
+  header {
+    padding: 20px;
+    text-align: center;
+    background-color: #111;
+    box-shadow: 0 2px 8px rgba(255,255,255,0.05);
+  }
 
-  <section id="sobrenosotros">
-    <h2>Sobre mí</h2>
-    <p>Hola! Soy Ana Fer, diseñadora gráfica e ilustradora. Creé Granada Estudio para compartir mis pasiones más grandes con el mundo.</p>
-    <img src="selfie.jpg" alt="Foto de [Tu Nombre]" width="300">
-  </section>
+  header h1 {
+    margin: 0;
+    font-size: 42px;
+    font-weight: 600;
+  }
 
-  <section id="proyectos">
-    <h2>Proyectos</h2>
-    <p>Este es uno de mis proyectos más recientes. Estoy trabajando en un libro ilustrado sobre 
-    la infancia y el "niño interior", estas son algunas de las ilustraciones; </p>
-    <img src="dibujo1.PNG" alt="Ilustración para libro" width="300">
-    <img src="dibujo2.jpg" alt="Proyecto 2" width="300">
-    <img src="dibujo3.PNG" alt="Proyecto 2" width="300">
-  </section>
+  nav {
+    margin-top: 10px;
+  }
 
-  <style>
+  nav a {
+    color: #ccc;
+    text-decoration: none;
+    margin: 0 12px;
+    font-weight: 300;
+  }
+
+  nav a:hover {
+    color: #fff;
+  }
+
+  section {
+    padding: 60px 20px;
+    text-align: center;
+  }
+
+  section h2 {
+    font-size: 36px;
+    color: #fff;
+    margin-bottom: 14px;
+    font-weight: 600;
+  }
+
+  section p {
+    font-size: 18px;
+    color: #ccc;
+    max-width: 800px;
+    margin: 0 auto 30px;
+    font-weight: 300;
+  }
+
   .galeria {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 20px;
     justify-content: center;
   }
 
-  .galeria img,
-  .galeria video {
-    max-width: 100%;
+  .card {
+    background-color: #111;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 6px 16px rgba(255,255,255,0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+    max-width: 320px;
+  }
+
+  .card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(255,255,255,0.15);
+  }
+
+  .card img, .card video {
+    width: 100%;
     height: auto;
-    border-radius: 8px;
+    display: block;
   }
 
-  .galeria img {
-    max-height: 500px; /* o el alto máximo que quieras permitir */
+  .card video {
+    max-height: 480px;
   }
 
-  .galeria video {
-    max-width: 300px;
+  .card-caption {
+    padding: 12px 16px;
+    font-size: 16px;
+    color: #ddd;
+    text-align: left;
+    font-weight: 400;
+  }
+
+  footer {
+    padding: 30px 20px;
+    background-color: #111;
+    text-align: center;
+    color: #777;
+    font-size: 14px;
+    margin-top: 40px;
   }
 </style>
 
+<header>
+  <h1>Granada Estudio</h1>
+  <nav>
+    <a href="#sobre-mi">Sobre mí</a>
+    <a href="#galeria">Galería</a>
+    <a href="#proyectos">Proyectos</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+</header>
+
+<section id="sobre-mi">
+  <h2>Sobre mí</h2>
+  <p>Soy una ilustradora apasionada por contar historias visuales que conectan con las emociones. Me encanta explorar técnicas digitales y tradicionales, creando mundos nostálgicos y poéticos.</p>
+</section>
+
 <section id="galeria">
   <h2>Galería</h2>
-  <p>Un vistazo virtual a mi mundo, pásale con confianza!.</p>
+  <p>Un vistazo virtual a mi mundo, pásale con confianza!</p>
 
   <div class="galeria">
-    <img src="dibujo3.png" alt="Imagen 1">
-    <img src="YSL FINAL.png" alt="Imagen 2">
-    <img src="bichito.PNG" alt="Imagen 3">
-    <img src="KOBAYASHI POST.png" alt="Imagen 4">
+    <div class="card">
+      <img src="dibujo3.png" alt="Dibujo 3">
+      <div class="card-caption">Dibujo 3</div>
+    </div>
 
-    <video controls>
-      <source src="video1.mp4" type="video/mp4">
-      Tu navegador no soporta videos.
-    </video>
+    <div class="card">
+      <img src="YSL FINAL.png" alt="YSL Proyecto">
+      <div class="card-caption">Proyecto YSL</div>
+    </div>
 
-    <img src="fish.jpg" alt="Imagen 5">
-    <img src="santossca.jpg" alt="Imagen 6">
-    <img src="logos.jpg" alt="Imagen 7">
-    <img src="quotes.jpg" alt="Imagen 8">
+    <div class="card">
+      <img src="bichito.PNG" alt="Bichito">
+      <div class="card-caption">Personaje Bichito</div>
+    </div>
+
+    <div class="card">
+      <img src="KOBAYASHI POST.png" alt="Kobayashi">
+      <div class="card-caption">Fanart Kobayashi</div>
+    </div>
+
+    <div class="card">
+      <video controls>
+        <source src="video1.mp4" type="video/mp4">
+        Tu navegador no soporta video.
+      </video>
+      <div class="card-caption">Animación corta</div>
+    </div>
+
+    <div class="card">
+      <img src="fish.jpg" alt="Fish Ilustración">
+      <div class="card-caption">Fish Ilustración</div>
+    </div>
+
+    <div class="card">
+      <img src="santossca.jpg" alt="Santos CCA">
+      <div class="card-caption">Diseño Santos CCA</div>
+    </div>
+
+    <div class="card">
+      <img src="logos.jpg" alt="Logos">
+      <div class="card-caption">Exploración de logos</div>
+    </div>
+
+    <div class="card">
+      <img src="quotes.jpg" alt="Quotes Proyecto">
+      <div class="card-caption">Quotes Proyecto</div>
+    </div>
   </div>
 </section>
 
+<section id="proyectos">
+  <h2>Proyectos</h2>
+  <p>Exploro diferentes formatos y medios: desde ilustraciones editoriales hasta animaciones, branding y concept art. Siempre buscando emocionar y contar historias con cada pieza.</p>
+</section>
 
-  <section id="contacto">
-    <h2>Contacto</h2>
-    <p>Puedes escribirme a: <a href="mailto:granadaestudioc@gmail.com">granadaestudioc@gmail.com</a></p>
-    <p>O seguirme en redes sociales:</p>
-    <a href="#">Instagram</a> | <a href="#">Behance</a> | <a href="#">LinkedIn</a>
-  </section>
+<section id="contacto">
+  <h2>Contacto</h2>
+  <p>¿Te gustaría colaborar o tienes una idea en mente? Escríbeme a: <a href="mailto:granadaestudio@gmail.com" style="color: #fff; text-decoration: underline;">granadaestudio@gmail.com</a></p>
+</section>
 
-  <footer>
-    <p>&copy; 2025 Granada Estudio. Todos los derechos reservados.</p>
-  </footer>
+<footer>
+  © 2025 Granada Estudio | Todos los derechos reservados.
+</footer>
 
-</body>
-</html>
